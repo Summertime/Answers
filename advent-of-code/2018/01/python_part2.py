@@ -2,15 +2,9 @@
 import sys
 from itertools import *
 
-input = [int(l) for l in sys.stdin.read().split()]
-
-# Part 1
-print(sum(input))
-
-# Part 2
 been = set()
 position = 0
-for v in cycle(input):
+for v in cycle(int(l) for l in sys.stdin.read().split()):
     position += v
     if position in been:
         break
